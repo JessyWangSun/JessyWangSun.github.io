@@ -4,620 +4,314 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jessy Wang | Portfolio</title>
-    <!-- Google Font -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
     <script src="script.js" defer></script>
   </head>
   <body>
-    <header>
-      <div class="logo">Jessy Wang</div>
-      <nav>
-        <ul>
-          <li><a href="#home">HOME</a></li>
-          <li><a href="#publications">PUBLICATIONS</a></li>
-          <li><a href="#projects">PROJECTS</a></li>
-          <li><a href="#leadership">LEADERSHIP</a></li>
-          <li><a href="#contact">CONTACT</a></li>
-          <li>
-            <a
-              href="https://www.canva.com/design/DAGz7f8gZ3k/Pw8OkJQpM2HQIwGd_4WUjg/edit?utm_content=DAGz7f8gZ3k&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
-              >Theory Map</a
-            >
-          </li>
-          <li><a href="files/resume.pdf" target="_blank">CV</a></li>
-          <!-- Opens resume.pdf in a new tab -->
-        </ul>
-      </nav>
-    </header>
-    <section id="home" class="hero">
-      <div class="content-wrapper">
-        <div class="left-section">
-          <!-- Image and Subtitle for W(ang)OBOT -->
-          <img src="assets/bot.jpg" alt="Wangobot" class="wangobot-image" />
-          <p class="wangobot-subtitle">W(ang)OBOT</p>
 
-          <!-- Single Start Chatting Button -->
-          <a href="http://18.224.65.94:8501" class="btn">......Click Here</a>
-          <p class="wangobot-description">
-            I've uploaded a part of myself to the cloud
-          </p>
-          <p class="wangobot-description">
-            —this is my digital jellyfish manifestation
-          </p>
-        </div>
-        <div class="center-photo">
-          <img src="assets/photo.jpg" alt="Jessy Wang" />
-        </div>
-        <div class="right-section">
-          <h1>About Me</h1>
-          <p>
-            Hi, I'm Jessy Wang, a second-year Ph.D. student in Emerging Media
-            Studies at Boston University. My work focuses on the psychological
-            determinants of human-computer interaction, leveraging
-            computational, qualitative, and community participatory design
-            methods to develop digital tools that address real-world mental
-            health challenges. I aim to ensure that technology is not only
-            innovative but also adapted to solve practical problems in ways that
-            drive social justice.
-          </p>
-        </div>
-      </div>
-    </section>
-    <section id="publications" class="publications-section">
-      <h1>Publications</h1>
+    <!-- ═══════════════════════════════════════════════════════
+         BENTO GRID
+    ═══════════════════════════════════════════════════════════ -->
+    <div class="bento-container" id="bento-container">
 
-      <!-- Journal Papers Section -->
-      <div class="publication-category">
-        <h2>Journal Papers</h2>
-        <!-- Journal Paper 1 -->
-        <!-- <div class="publication-item">
-          <div class="publication-details">
-            <p class="publication-title">
-              <a
-                >Decoding HPV vaccine discourse: A ChatGPT-driven health belief
-                analysis on social media.</a
-              >
-            </p>
-            <p class="publication-authors">
-              Wang, J., Lian, J., Xu, L., & Lokmanoglu, A. D. (2025).
-            </p>
-            <p class="publication-details-text">
-              Communication Methods and Measures. Manuscript under review.
-            </p>
-            <p class="publication-keywords">
-              <b>Keywords</b>: HPV vaccination, GPT-annotation, prompt
-              engineering, time series analysis, text analysis, health
-              communication, social media discourse
-            </p>
-            <div class="abstract-content">
-              <p>
-                <b>Abstract</b>: Human Papillomavirus (HPV) infection remains a
-                global public health concern, with persistently low vaccination
-                rates contributing to significant health risks. Despite previous
-                research on HPV vaccine perceptions, challenges in large-scale
-                data analysis and achieving ideal accuracy persist. To address
-                this gap, this study developed a GPT-Health Belief Model (HBM)
-                program to efficiently annotate HPV-related discourse on
-                Twitter. Through text labeling and time series analysis of 5,575
-                tweets, this study elucidates distinct patterns and dynamic
-                relationships within public health beliefs, particularly in the
-                context of vaccination. The application of large language
-                models, including GPT, demonstrated high reliability, achieving
-                Krippendorff's alpha scores between 0.87 and 0.96, which
-                underscores the model's accuracy in classifying nuanced health
-                communication data. Time series analysis revealed temporal
-                relationships among the components of the Health Belief Model
-                (HBM) and behavioral tendencies. These analyses highlight the
-                potential of advanced statistical techniques to uncover the
-                temporal dynamics that shape public discourse and attitudes
-                toward health behaviors over time. This approach demonstrates
-                the potential of GPT-based models to enhance understanding of
-                health beliefs in social media discourse.
-              </p>
+      <!-- ── PANEL: Hero (top-left) ──────────────────────────── -->
+      <div class="panel panel-hero" id="panel-hero">
+        <div class="panel-inner">
+
+          <nav class="hero-nav">
+            <button class="nav-link" onclick="openOverlay('publications')">Publications</button>
+            <button class="nav-link" onclick="openOverlay('leadership')">Leadership</button>
+            <a class="nav-link" href="https://www.canva.com/design/DAGz7f8gZ3k/Pw8OkJQpM2HQIwGd_4WUjg/edit?utm_content=DAGz7f8gZ3k&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank">Theory Map</a>
+            <a class="nav-link" href="files/resume.pdf" target="_blank">CV</a>
+          </nav>
+
+          <div class="hero-main">
+            <img src="assets/photo.jpg" alt="Jessy Wang" class="hero-photo" />
+            <div class="hero-text">
+              <h1 class="heading-display">Hi, I'm<br />Jessy Wang</h1>
+              <span class="heading-display hero-subtitle" id="rotating-text">a PhD Researcher</span>
             </div>
           </div>
-          <button class="abstract-btn" onclick="toggleAbstract(this)">
-            Abstract
-          </button>
-        </div> -->
 
-        <!-- Journal Paper 2 -->
-        <div class="publication-item">
-          <div class="publication-details">
-            <p class="publication-title">
-              <a
-                >Don't Browse It, Experience It: Spatial Presence Mediated the
-                Effect of 3D Marketing Websites.</a
-              >
-            </p>
-            <p class="publication-authors">
-              Yang, J., Wang, J., Wang, Y., & Lin, J. (2025).
-            </p>
-            <p class="publication-details-text">
-              Computers in Human Behavior. Manuscript under review.
-            </p>
-            <p class="publication-keywords">
-              <b>Keywords</b>: 3D websites, non-immersive virtual reality,
-              spatial presence, purchase intention, consumer learning,
-              e-commerce, v-commerce
-            </p>
-            <div class="abstract-content">
-              <p>
-                <b>Abstract</b>: With the development of technologies, 3D
-                websites, which display dynamic and interactive virtual
-                environments on the screen, emerged as an innovative marketing
-                tool. Despite previous research has explored the effectiveness
-                of 3D websites on consumer behaviors, few studies have examined
-                the potential mediation effect of spatial presence in such
-                effectiveness. Aiming to fill this research gap, the current
-                study conducted two pre-registered experiments. By comparing the
-                effect of 3D websites to static 2D websites in a commercial
-                (Experiment 1) and a non-commercial context (Experiment 2), we
-                found that 3D websites could elicit users’ feelings of
-                entertainment (i.e., enjoyment and appreciation) and a greater
-                purchase intention through spatial presence. These results
-                validate the value of 3D websites as a marketing tool and shed
-                light on a possible underlying mechanism. The theoretical and
-                practical implications are further discussed.
-              </p>
+          <div class="wangobot-bar">
+            <img src="assets/bot.jpg" alt="W(ang)OBOT" class="wangobot-mini" />
+            <div class="wangobot-info">
+              <span class="text-meta">W(ang)OBOT — my digital jellyfish manifestation</span>
+              <a href="http://18.224.65.94:8501" class="btn-pill" target="_blank">Chat with me ↗</a>
             </div>
           </div>
-          <button class="abstract-btn" onclick="toggleAbstract(this)">
-            Abstract
-          </button>
+
         </div>
       </div>
 
-      <!-- Peer-Reviewed Conference Papers Section -->
-      <div class="publication-category">
-        <h2>Peer-Reviewed Conference Papers</h2>
-        <div class="publication-item">
-          <div class="publication-details">
-            <p class="publication-title">
-              <a
-                >From Digital Group Game to Deeper Bonds: Enhancing
-                Self-Disclosure Capability through StEMory and the Envisioned
-                Role of Social Robots.</a
-              >
-            </p>
-            <p class="publication-authors">
-              Wang, J., Alghowinem, S.,... & Breazeal, C. (2025).
-            </p>
-            <p class="publication-details-text">
-              Proceedings of ACM CSCW '28. Under review.
-            </p>
+      <!-- ── DIVIDER: Vertical ─────────────────────────────────── -->
+      <div class="divider-v" id="divider-v"></div>
 
-            <p class="publication-keywords">
-              <b>Keywords</b>: Human-centered computing , Applied computing,
-              Digital game, Group game, Social-emotional skill, Interpersonal
-              closeness, Self-disclosure, Mental well-being, Social robots
-            </p>
+      <!-- ── PANEL: About (top-right) ───────────────────────────── -->
+      <div class="panel panel-about" id="panel-about">
+        <div class="panel-inner">
 
-            <div class="abstract-content">
-              <p>
-                <b>Abstract</b>: This study is part of a broader research
-                project exploring the design of a social robot that facilitates
-                a digital group game intervention aimed at enhancing
-                participants' social-emotional skills and mental well-being. At
-                this stage, the research focuses on developing a digital
-                visual-emotional-stimuli-based group game, StEMory (Stimulated
-                Emotional Memory), bringing participants' emotional safety to
-                self-disclose, and fostering trust and interpersonal closeness
-                in group settings. A mixed-method design has been implemented to
-                measure the significance of game effects and explore users'
-                underlying psychological key for group interpersonal
-                connectedness, as well as their views on the potential role a
-                social robot could play in facilitating the game. A key design
-                feature of the game is the adoption of the emotion-memory
-                cognitive model while implementing complex emotional images for
-                deeper cognitive processing. Within a theoretical framework
-                built upon psychological theories, the study findings indicate a
-                significant increase in both interpersonal closeness and
-                individual-level willingness to engage in self-disclosure. This
-                study also establishes a foundation for future CSCW research by
-                developing a design guide for integrating a social robot into
-                the group social-emotional intervention.
-              </p>
+          <h2 class="heading-panel clickable-panel" onclick="openOverlay('about')">
+            About Me <span class="expand-arrow">↗</span>
+          </h2>
+
+          <div class="about-row">
+            <img src="assets/photo.jpg" alt="Jessy Wang" class="about-img" />
+            <p class="text-body">
+              Second-year Ph.D. student in Emerging Media Studies at Boston University.
+              My work focuses on the psychological determinants of human-computer interaction,
+              leveraging computational, qualitative, and community participatory design methods
+              to develop digital tools that address real-world mental health challenges.
+              I aim to ensure that technology is not only innovative but also adapted to
+              solve practical problems in ways that drive social justice.
+            </p>
+          </div>
+
+          <div class="tags">
+            <span class="tag">HCI</span>
+            <span class="tag">Mental Health</span>
+            <span class="tag">Social Robots</span>
+            <span class="tag">Participatory Design</span>
+            <span class="tag">Computational Methods</span>
+            <span class="tag">CSCW</span>
+            <span class="tag">Social Justice</span>
+            <span class="tag">Qualitative Research</span>
+            <span class="tag">NLP</span>
+            <span class="tag">Emerging Media</span>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── DIVIDER: Horizontal ────────────────────────────────── -->
+      <div class="divider-h" id="divider-h"></div>
+
+      <!-- ── PANEL: Work (bottom-left) ─────────────────────────── -->
+      <div class="panel panel-work" id="panel-work">
+        <div class="panel-inner">
+
+          <h2 class="heading-panel clickable-panel" onclick="openOverlay('work')">
+            Work <span class="expand-arrow">↗</span>
+          </h2>
+
+          <div class="mini-grid">
+            <div class="mini-card"><a href="projects/SocialRobot.html"><img src="assets/project_pics/socialrobot/jibo.png" alt="Social Robot" /><span>Social Robot in Group Intervention</span></a></div>
+            <div class="mini-card"><a href="projects/HPV.html"><img src="assets/project_pics/hpv/HPV_Data_Visualization/VAR.png" alt="HPV Vaccination" /><span>HPV Vaccination in U.S.</span></a></div>
+            <div class="mini-card"><a href="projects/ste.html"><img src="assets/project_pics/StEmory Game for Social Emotional Intelligence/Cover.png" alt="StEmory" /><span>StEmory Game</span></a></div>
+            <div class="mini-card"><a href="projects/wobot.html"><img src="assets/project_pics/Wobot/wobot_main.png" alt="Wobot" /><span>W(ang)obot</span></a></div>
+            <div class="mini-card"><a href="projects/BLM.html"><img src="assets/project_pics/blm/blm_main.webp" alt="BLM" /><span>BLM Research</span></a></div>
+            <div class="mini-card"><a href="https://www.daplab.education.uci.edu/lilo"><img src="assets/project_pics/lilo/lilo_main.png" alt="Lilo" /><span>Lilo Chatbot</span></a></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── PANEL: Publications + Contact (bottom-right) ─────── -->
+      <div class="panel panel-pubs" id="panel-pubs">
+        <div class="panel-inner">
+
+          <h2 class="heading-panel clickable-panel" onclick="openOverlay('publications')">
+            Publications <span class="expand-arrow">↗</span>
+          </h2>
+
+          <div class="pubs-mini">
+            <div class="pub-mini-item">
+              <p class="pub-mini-title">Don't Browse It, Experience It: Spatial Presence Mediated the Effect of 3D Marketing Websites.</p>
+              <p class="pub-mini-meta">Yang, J., Wang, J., et al. (2025) · Computers in Human Behavior</p>
+            </div>
+            <div class="pub-mini-item">
+              <p class="pub-mini-title">From Digital Group Game to Deeper Bonds: Enhancing Self-Disclosure Capability through StEMory.</p>
+              <p class="pub-mini-meta">Wang, J., Alghowinem, S., et al. (2025) · ACM CSCW '28</p>
+            </div>
+            <div class="pub-mini-item">
+              <p class="pub-mini-title">Designing Social Robots to Facilitate Social-Emotional Skills in Interactive Games.</p>
+              <p class="pub-mini-meta">Wang, J., Alghowinem, S., et al. (2025) · ICA '75</p>
+            </div>
+            <div class="pub-mini-item">
+              <p class="pub-mini-title">A War-Narrative of Covid-19 on Social Media: Leadership, Individual Sacrifice, and Emotion.</p>
+              <p class="pub-mini-meta">Wang, J. (2022) · Society Must Be Inoculated Conference</p>
             </div>
           </div>
-          <button class="abstract-btn" onclick="toggleAbstract(this)">
-            Abstract
-          </button>
+
+          <div class="contact-bar">
+            <a href="mailto:jwang33@bu.edu" class="contact-link">
+              <img src="assets/icons/email.png" alt="Email" /> jwang33@bu.edu
+            </a>
+            <a href="https://www.linkedin.com/in/jessy-wang-bb4461b5/" class="contact-link" target="_blank">
+              <img src="assets/icons/linkedin.png" alt="LinkedIn" /> LinkedIn
+            </a>
+            <a href="https://github.com/JessyWangSun" class="contact-link" target="_blank">
+              <img src="assets/icons/github.png" alt="GitHub" /> GitHub
+            </a>
+          </div>
+
         </div>
+      </div>
 
-        <!-- Conference Paper 2 -->
-        <div class="publication-item">
-          <div class="publication-details">
-            <p class="publication-title">
-              <a
-                >Designing Social Robots to Facilitate Social-Emotional Skills
-                in Interactive Games.</a
-              >
-            </p>
-            <p class="publication-authors">
-              Wang, J., Alghowinem, S.,... & Breazeal, C. (2025).
-            </p>
-            <p class="publication-details-text">
-              ICA '75. Extended abstract under review.
-            </p>
+    </div><!-- /.bento-container -->
 
-            <p class="publication-keywords">
-              <b>Keywords</b>: Social Robot, Social-emotional skill, CASA Model,
-              Human-Computer Interaction, Game Design, Group Game
-            </p>
 
+    <!-- ═══════════════════════════════════════════════════════
+         OVERLAYS
+    ═══════════════════════════════════════════════════════════ -->
+
+    <!-- WORK OVERLAY -->
+    <div class="overlay hidden" id="overlay-work">
+      <div class="overlay-inner">
+        <button class="close-btn" onclick="closeOverlay('work')">✕</button>
+        <h2 class="overlay-heading">Work</h2>
+        <div class="overlay-projects-grid">
+          <div class="proj-card"><a href="projects/SocialRobot.html"><img src="assets/project_pics/socialrobot/jibo.png" alt="Social Robot" /><p>Social Robot in Group Intervention</p></a></div>
+          <div class="proj-card"><a href="projects/HPV.html"><img src="assets/project_pics/hpv/HPV_Data_Visualization/VAR.png" alt="HPV" /><p>HPV Vaccination in U.S.</p></a></div>
+          <div class="proj-card"><a href="projects/ste.html"><img src="assets/project_pics/StEmory Game for Social Emotional Intelligence/Cover.png" alt="StEmory" /><p>StEmory Game for Social Emotional Intelligence</p></a></div>
+          <div class="proj-card"><a href="projects/wobot.html"><img src="assets/project_pics/Wobot/wobot_main.png" alt="Wobot" /><p>W(ang)obot</p></a></div>
+          <div class="proj-card"><a href="projects/BLM.html"><img src="assets/project_pics/blm/blm_main.webp" alt="BLM" /><p>Research on BLACK LIVES MATTER Movement</p></a></div>
+          <div class="proj-card"><a href="https://www.daplab.education.uci.edu/lilo"><img src="assets/project_pics/lilo/lilo_main.png" alt="Lilo" /><p>Lilo Chatbot</p></a></div>
+          <div class="proj-card"><a href="https://www.decruit.org/publications/"><img src="assets/project_pics/de-cruit/lab_main.webp" alt="Trauma Lab" /><p>Research Assistant at Trauma Lab</p></a></div>
+          <div class="proj-card"><a href="projects/veteran.html"><img src="assets/project_pics/Veteran & PTSD/cover image/main.png" alt="Veteran PTSD" /><p>Veteran PTSD Online Education</p></a></div>
+          <div class="proj-card"><a href="projects/BCAN.html"><img src="assets/project_pics/bcan/bcan_main.png" alt="BCAN" /><p>Boston Climate Action Network (BCAN)</p></a></div>
+          <div class="proj-card"><a href="projects/AI_harr.html"><img src="assets/project_pics/AI in Harassment Support/3.png" alt="AI Harassment" /><p>AI in Harassment Support</p></a></div>
+          <div class="proj-card"><a href="projects/sexed.html"><img src="assets/project_pics/Sex Education/Sex_ED_main.png" alt="Sex Ed" /><p>Sex Education</p></a></div>
+          <div class="proj-card"><a href="projects/BCH.html"><img src="assets/project_pics/bos_child/main.jpg" alt="BCH" /><p>App Design for Boston Children Hospital</p></a></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PUBLICATIONS OVERLAY -->
+    <div class="overlay hidden" id="overlay-publications">
+      <div class="overlay-inner">
+        <button class="close-btn" onclick="closeOverlay('publications')">✕</button>
+        <h2 class="overlay-heading">Publications</h2>
+
+        <p class="overlay-cat-title">Journal Papers</p>
+
+        <div class="pub-item-full">
+          <div class="pub-item-details">
+            <p class="pub-full-title">Don't Browse It, Experience It: Spatial Presence Mediated the Effect of 3D Marketing Websites.</p>
+            <p class="pub-full-authors">Yang, J., Wang, J., Wang, Y., &amp; Lin, J. (2025).</p>
+            <p class="pub-full-venue">Computers in Human Behavior. Manuscript under review.</p>
+            <p class="pub-full-keywords"><b>Keywords</b>: 3D websites, non-immersive virtual reality, spatial presence, purchase intention, consumer learning, e-commerce, v-commerce</p>
             <div class="abstract-content">
-              <p>
-                <b>Abstract</b>: This study explores the integration of an
-                embodied social robot within a hybrid in-person and digital
-                group game designed to enhance social-emotional skills and
-                foster group bonding among participants. Building upon existing
-                theoretical frameworks, we examine the potential roles for
-                embodied social robots—therapeutic, educational, and
-                facilitative—each aimed at strengthening social-emotional
-                connections within a structured, interactive game environment. A
-                mixed-method design involving pre- and post-surveys and
-                Technology Acceptance Model (TAM)--based assessments will
-                evaluate how each robot role influences user experience,
-                perceived bonding, and emotional engagement. The study result
-                will contribute to the theoretical extension of Computers as
-                Social Actors (CASA) and empirical applications of embodied
-                social robot design in a group setting.
-              </p>
+              <p><b>Abstract</b>: With the development of technologies, 3D websites, which display dynamic and interactive virtual environments on the screen, emerged as an innovative marketing tool. Despite previous research has explored the effectiveness of 3D websites on consumer behaviors, few studies have examined the potential mediation effect of spatial presence in such effectiveness. Aiming to fill this research gap, the current study conducted two pre-registered experiments. By comparing the effect of 3D websites to static 2D websites in a commercial (Experiment 1) and a non-commercial context (Experiment 2), we found that 3D websites could elicit users' feelings of entertainment (i.e., enjoyment and appreciation) and a greater purchase intention through spatial presence. These results validate the value of 3D websites as a marketing tool and shed light on a possible underlying mechanism. The theoretical and practical implications are further discussed.</p>
             </div>
           </div>
-          <button class="abstract-btn" onclick="toggleAbstract(this)">
-            Abstract
-          </button>
+          <button class="abstract-btn" onclick="toggleAbstract(this)">Abstract</button>
         </div>
 
-        <!-- Conference Paper 3 -->
-        <!-- <div class="publication-item">
-          <div class="publication-details">
-            <p class="publication-title">
-              <a
-                >Self-Disclosure in Virtual Agents: How Self-Disclosure in
-                Digital Companions Touches Our Emotional Engagement through
-                Content and Modality.</a
-              >
-            </p>
-            <p class="publication-authors">Wang, J., Sun, Y. (2025).</p>
-            <p class="publication-details-text">
-              ICA '75. Manuscript under review.
-            </p>
-            <p class="publication-keywords">
-              <b>Keywords</b>: Virtual Agents, Self-Disclosure, Emotional
-              Engagement, Voice Modality, Human-Computer Interaction, CASA Model
-            </p>
+        <p class="overlay-cat-title">Peer-Reviewed Conference Papers</p>
+
+        <div class="pub-item-full">
+          <div class="pub-item-details">
+            <p class="pub-full-title">From Digital Group Game to Deeper Bonds: Enhancing Self-Disclosure Capability through StEMory and the Envisioned Role of Social Robots.</p>
+            <p class="pub-full-authors">Wang, J., Alghowinem, S.,... &amp; Breazeal, C. (2025).</p>
+            <p class="pub-full-venue">Proceedings of ACM CSCW '28. Under review.</p>
+            <p class="pub-full-keywords"><b>Keywords</b>: Human-centered computing, Applied computing, Digital game, Group game, Social-emotional skill, Interpersonal closeness, Self-disclosure, Mental well-being, Social robots</p>
             <div class="abstract-content">
-              <p>
-                <b>Abstract</b>: This experimental study investigates how
-                self-disclosure by virtual agents sparks emotional engagement.
-                Specifically, the extent of self-disclosure (high or low) and
-                the modality (text-only or voice-inclusive) are manipulated to
-                examine the effectiveness under different conditions. Emotional
-                engagement was measured biometrically, including heart rate and
-                skin conductance. Preliminary analysis reveals that a virtual
-                agent with personal-related text disclosure and voice gains the
-                most emotional engagement from users, though it also has the
-                highest tendency to bring the cognitive load. While the current
-                data supports informative analysis, data collection is still in
-                progress to strengthen the statistical significance of
-                identified trends. Further analysis that will allow more probing
-                for insights will be conducted prior to the 2025 ICA conference.
-                This research is expected to provide insights into the design
-                and adoption of virtual agents in tasks requiring emotional
-                connection.
-              </p>
+              <p><b>Abstract</b>: This study is part of a broader research project exploring the design of a social robot that facilitates a digital group game intervention aimed at enhancing participants' social-emotional skills and mental well-being. At this stage, the research focuses on developing a digital visual-emotional-stimuli-based group game, StEMory (Stimulated Emotional Memory), bringing participants' emotional safety to self-disclose, and fostering trust and interpersonal closeness in group settings. A mixed-method design has been implemented to measure the significance of game effects and explore users' underlying psychological key for group interpersonal connectedness, as well as their views on the potential role a social robot could play in facilitating the game. A key design feature of the game is the adoption of the emotion-memory cognitive model while implementing complex emotional images for deeper cognitive processing. Within a theoretical framework built upon psychological theories, the study findings indicate a significant increase in both interpersonal closeness and individual-level willingness to engage in self-disclosure. This study also establishes a foundation for future CSCW research by developing a design guide for integrating a social robot into the group social-emotional intervention.</p>
             </div>
           </div>
-          <button class="abstract-btn" onclick="toggleAbstract(this)">
-            Abstract
-          </button>
-        </div> -->
+          <button class="abstract-btn" onclick="toggleAbstract(this)">Abstract</button>
+        </div>
 
-        <!-- Conference Paper 4 -->
-        <div class="publication-item">
-          <div class="publication-details">
-            <p class="publication-title">
-              <a
-                >A War-Narrative of Covid-19 on Social Media: Leadership,
-                Individual Sacrifice, and Emotion.</a
-              >
-            </p>
-            <p class="publication-authors">Wang, J. (2022).</p>
-            <p class="publication-details-text">
-              Society Must Be Inoculated Conference. Paper presented.
-            </p>
-
-            <p class="publication-keywords">
-              <b>Keywords</b>: War Narrative, Psychology of War, Individual
-              sacrifice, Social media, COVID-19
-            </p>
-
+        <div class="pub-item-full">
+          <div class="pub-item-details">
+            <p class="pub-full-title">Designing Social Robots to Facilitate Social-Emotional Skills in Interactive Games.</p>
+            <p class="pub-full-authors">Wang, J., Alghowinem, S.,... &amp; Breazeal, C. (2025).</p>
+            <p class="pub-full-venue">ICA '75. Extended abstract under review.</p>
+            <p class="pub-full-keywords"><b>Keywords</b>: Social Robot, Social-emotional skill, CASA Model, Human-Computer Interaction, Game Design, Group Game</p>
             <div class="abstract-content">
-              <p>
-                <b>Abstract</b>: A large-scale text analysis examining
-                propaganda and public emotion during the COVID-19.
-              </p>
+              <p><b>Abstract</b>: This study explores the integration of an embodied social robot within a hybrid in-person and digital group game designed to enhance social-emotional skills and foster group bonding among participants. Building upon existing theoretical frameworks, we examine the potential roles for embodied social robots—therapeutic, educational, and facilitative—each aimed at strengthening social-emotional connections within a structured, interactive game environment. A mixed-method design involving pre- and post-surveys and Technology Acceptance Model (TAM)--based assessments will evaluate how each robot role influences user experience, perceived bonding, and emotional engagement. The study result will contribute to the theoretical extension of Computers as Social Actors (CASA) and empirical applications of embodied social robot design in a group setting.</p>
             </div>
           </div>
-          <button class="abstract-btn" onclick="toggleAbstract(this)">
-            Abstract
-          </button>
-        </div>
-      </div>
-    </section>
-    <!-- Projects Section -->
-    <section id="projects" class="projects-section">
-      <h1>Projects</h1>
-      <div class="projects-container">
-        <!-- Project Cards -->
-        <div class="project-card">
-          <a href="projects/SocialRobot.html">
-            <img
-              src="assets/project_pics/socialrobot/jibo.png"
-              alt="Social Robot in Group Intervention"
-            />
-            <p>Social Robot in Group Intervention</p>
-          </a>
+          <button class="abstract-btn" onclick="toggleAbstract(this)">Abstract</button>
         </div>
 
-        <div class="project-card">
-          <a href="projects/HPV.html">
-            <img
-              src="assets/project_pics/hpv/HPV_Data_Visualization/VAR.png"
-              alt="HPV Vaccination in U.S."
-            />
-            <p>HPV Vaccination in U.S.</p>
-          </a>
-        </div>
-
-        <div class="project-card">
-          <a href="projects/ste.html">
-            <img
-              src="assets/project_pics/StEmory Game for Social Emotional Intelligence/Cover.png"
-              alt="StEmory Game for Social Emotional Intelligence"
-            />
-            <p>StEmory Game for Social Emotional Intelligence</p>
-          </a>
-        </div>
-
-        <div class="project-card">
-          <a href="/projects/wobot.html">
-            <img
-              src="assets/project_pics/Wobot/wobot_main.png"
-              alt="W(ang)obot Chatbot"
-            />
-            <p>W(ang)obot</p>
-          </a>
-        </div>
-
-        <div class="project-card">
-          <a href="projects/BLM.html">
-            <img
-              src="assets/project_pics/blm/blm_main.webp"
-              alt="Research on BLACK LIVES MATTER Movement"
-            />
-            <p>Research on BLACK LIVES MATTER Movement</p>
-          </a>
-        </div>
-
-        <div class="project-card">
-          <a href="https://www.daplab.education.uci.edu/lilo">
-            <img
-              src="assets/project_pics/lilo/lilo_main.png"
-              alt="Lilo Chatbot"
-            />
-            <p>Lilo Chatbot</p>
-          </a>
-        </div>
-
-        <div class="project-card">
-          <a href="https://www.decruit.org/publications/">
-            <img
-              src="assets/project_pics/de-cruit/lab_main.webp"
-              alt="Trauma Lab"
-            />
-            <p>Research Assistant at Trauma Lab</p>
-          </a>
-        </div>
-
-        <div class="project-card">
-          <a href="projects/veteran.html">
-            <img
-              src="assets/project_pics/Veteran & PTSD/cover image/main.png"
-              alt="Veteran PTSD Online Education"
-            />
-            <p>Veteran PTSD Online Education</p>
-          </a>
-        </div>
-
-        <div class="project-card">
-          <a href="projects/BCAN.html">
-            <img
-              src="assets/project_pics/bcan/bcan_main.png"
-              alt="Boston Climate Action Network (BCAN)"
-            />
-            <p>Boston Climate Action Network (BCAN)</p>
-          </a>
-        </div>
-
-        <div class="project-card">
-          <a href="/projects/AI_harr.html">
-            <img
-              src="assets/project_pics/AI in Harassment Support/3.png"
-              alt="AI in Harassment Support"
-            />
-            <p>AI in Harassment Support</p>
-          </a>
-        </div>
-
-        <div class="project-card">
-          <a href="projects/sexed.html">
-            <img
-              src="assets/project_pics/Sex Education/Sex_ED_main.png"
-              alt="Sex Education"
-            />
-            <p>Sex Education</p>
-          </a>
-        </div>
-
-        <div class="project-card">
-          <a href="projects/BCH.html">
-            <img
-              src="assets/project_pics/bos_child/main.jpg"
-              alt="App Design for Boston Children Hospital"
-            />
-            <p>App Design for Boston Children Hospital</p>
-          </a>
-        </div>
-        <!-- 
-        <div class="project-card">
-          <a href="projects/covid.html">
-            <img
-              src="assets/project3.jpg"
-              alt="Physiological Response to Virtual Agents"
-            />
-            <p>Physiological Response to Virtual Agents</p>
-          </a>
-        </div>
-
-        <div class="project-card">
-          <a href="#">
-            <img src="assets/project6.jpg" alt="Media Literacy Workshop" />
-            <p>Media Literacy Workshop</p>
-          </a>
-        </div>
-        <div class="project-card">
-          <a href="#">
-            <img src="assets/project7.jpg" alt="Mental Health Workshop" />
-            <p>Mental Health Workshop</p>
-          </a>
-        </div>-->
-      </div>
-    </section>
-
-    <section id="leadership" class="activities-section">
-      <h1>Community Impact and Leadership Activities</h1>
-      <div class="activities-container">
-        <!-- Activity 1 -->
-        <div class="activity-card">
-          <div class="activity-image">
-            <img
-              src="assets/leadership/magazine/magazine_main.png"
-              alt="EJACULATION Magazine"
-            />
+        <div class="pub-item-full">
+          <div class="pub-item-details">
+            <p class="pub-full-title">A War-Narrative of Covid-19 on Social Media: Leadership, Individual Sacrifice, and Emotion.</p>
+            <p class="pub-full-authors">Wang, J. (2022).</p>
+            <p class="pub-full-venue">Society Must Be Inoculated Conference. Paper presented.</p>
+            <p class="pub-full-keywords"><b>Keywords</b>: War Narrative, Psychology of War, Individual sacrifice, Social media, COVID-19</p>
+            <div class="abstract-content">
+              <p><b>Abstract</b>: A large-scale text analysis examining propaganda and public emotion during the COVID-19.</p>
+            </div>
           </div>
-          <div class="activity-text">
-            <h2>Founder and Editor of “EJACULATION” Magazine</h2>
-            <p>
-              Founded and served as editor of *Ejaculation*, an independent art
-              magazine showcasing Asian artwork addressing themes of gender,
-              body image, and social justice. Published quarterly, the magazine
-              functions as an alternative Chinese media outlet in response to
-              censorship on artistic expression.
+          <button class="abstract-btn" onclick="toggleAbstract(this)">Abstract</button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ABOUT OVERLAY -->
+    <div class="overlay hidden" id="overlay-about">
+      <div class="overlay-inner">
+        <button class="close-btn" onclick="closeOverlay('about')">✕</button>
+        <div class="overlay-about-layout">
+          <div class="overlay-about-img-col">
+            <img src="assets/photo.jpg" alt="Jessy Wang" class="overlay-about-img" />
+          </div>
+          <div class="overlay-about-text-col">
+            <h2 class="overlay-heading">About Me</h2>
+            <p class="text-body-lg">
+              Hi, I'm Jessy Wang, a second-year Ph.D. student in Emerging Media Studies at Boston University.
+              My work focuses on the psychological determinants of human-computer interaction, leveraging
+              computational, qualitative, and community participatory design methods to develop digital tools
+              that address real-world mental health challenges. I aim to ensure that technology is not only
+              innovative but also adapted to solve practical problems in ways that drive social justice.
             </p>
+            <div class="tags overlay-tags">
+              <span class="tag">HCI</span>
+              <span class="tag">Mental Health</span>
+              <span class="tag">Social Robots</span>
+              <span class="tag">Participatory Design</span>
+              <span class="tag">Computational Methods</span>
+              <span class="tag">CSCW</span>
+              <span class="tag">Social Justice</span>
+              <span class="tag">Qualitative Research</span>
+              <span class="tag">NLP</span>
+              <span class="tag">Emerging Media</span>
+            </div>
           </div>
         </div>
-        <!-- Activity 2 -->
-        <div class="activity-card">
-          <div class="activity-image">
-            <img
-              src="assets/leadership/art/intouch.jpg"
-              alt="Contemporary Artist"
-            />
-          </div>
-          <div class="activity-text">
-            <h2>Contemporary Artist and Advocate</h2>
-            <p>
-              Advocate for marginalized voices through artwork focused on
-              individual empowerment and social justice. Exhibitions include
-              “You” (Taiwan, 2019), “Shhh!” (Beijing, 2020), and “InTouch”
-              (Cambridge, 2024).
-            </p>
+      </div>
+    </div>
+
+    <!-- LEADERSHIP OVERLAY -->
+    <div class="overlay hidden" id="overlay-leadership">
+      <div class="overlay-inner">
+        <button class="close-btn" onclick="closeOverlay('leadership')">✕</button>
+        <h2 class="overlay-heading">Community Impact &amp; Leadership</h2>
+
+        <div class="activity-card-full">
+          <img src="assets/leadership/magazine/magazine_main.png" alt="EJACULATION Magazine" />
+          <div>
+            <h3>Founder and Editor of "EJACULATION" Magazine</h3>
+            <p>Founded and served as editor of <em>Ejaculation</em>, an independent art magazine showcasing Asian artwork addressing themes of gender, body image, and social justice. Published quarterly, the magazine functions as an alternative Chinese media outlet in response to censorship on artistic expression.</p>
           </div>
         </div>
-        <!-- Activity 3 -->
-        <!-- <div class="activity-card">
-      <div class="activity-image">
-        <img
-          src="assets/leadership/school_association.jpg"
-          alt="School Association President"
-        />
-      </div>
-      <div class="activity-text">
-        <h2>School Association President in Taiwan</h2>
-        <p>
-          Led initiatives focused on cultural and social engagement.
-          Organized events fostering discussions on mental health, social
-          issues, and cultural identity, strengthening community ties and
-          promoting awareness.
-        </p>
-      </div>
-    </div> -->
-        <!-- Activity 4 -->
-        <div class="activity-card">
-          <div class="activity-image">
-            <img
-              src="assets/leadership/mental_group.webp"
-              alt="Mental Health Workshop"
-            />
-          </div>
-          <div class="activity-text">
-            <h2>Community Mental Health Group Workshops</h2>
-            <p>
-              Organized workshops for Chinese immigrants during COVID-19
-              quarantine, focusing on coping strategies, community support, and
-              mental health resources. Served over 100 participants.
-            </p>
+
+        <div class="activity-card-full">
+          <img src="assets/leadership/art/intouch.jpg" alt="Contemporary Artist" />
+          <div>
+            <h3>Contemporary Artist and Advocate</h3>
+            <p>Advocate for marginalized voices through artwork focused on individual empowerment and social justice. Exhibitions include "You" (Taiwan, 2019), "Shhh!" (Beijing, 2020), and "InTouch" (Cambridge, 2024).</p>
           </div>
         </div>
-        <!-- Activity 5 -->
-        <!-- <div class="activity-card">
-      <div class="activity-image">
-        <img
-          src="assets/leadership/resource_coordination.jpg"
-          alt="Resource Coordination Volunteer"
-        />
-      </div>
-      <div class="activity-text">
-        <h2>Volunteer for Resource Coordination During COVID-19</h2>
-        <p>
-          Coordinated delivery of 100 ventilators to Wuhan, connecting
-          logistics manufacturers with hospitals to ensure timely and
-          efficient distribution during the pandemic.
-        </p>
-      </div>
-    </div>-->
-      </div>
-    </section>
-    <section id="contact" class="contact-section">
-      <h1>Contact</h1>
-      <div class="contact-container">
-        <div class="contact-item">
-          <img src="assets/icons/email.png" alt="Email Icon" />
-          <a href="mailto:jwang33@bu.edu">jwang33@bu.edu</a>
+
+        <div class="activity-card-full">
+          <img src="assets/leadership/mental_group.webp" alt="Mental Health Workshop" />
+          <div>
+            <h3>Community Mental Health Group Workshops</h3>
+            <p>Organized workshops for Chinese immigrants during COVID-19 quarantine, focusing on coping strategies, community support, and mental health resources. Served over 100 participants.</p>
+          </div>
         </div>
-        <div class="contact-item">
-          <img src="assets/icons/linkedin.png" alt="LinkedIn Icon" />
-          <a
-            href="https://www.linkedin.com/in/jessy-wang-bb4461b5/"
-            target="_blank"
-            >LinkedIn Profile</a
-          >
-        </div>
-        <div class="contact-item">
-          <img src="assets/icons/github.png" alt="GitHub Icon" />
-          <a href="https://github.com/JessyWangSun" target="_blank"
-            >GitHub Page</a
-          >
-        </div>
+
       </div>
-    </section>
+    </div>
+
   </body>
 </html>
