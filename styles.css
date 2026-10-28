@@ -48,12 +48,20 @@ h1 {
 }
 
 .profile-title {
-  max-width: 780px;
-  margin-bottom: 7px;
-  color: var(--muted);
-  font-size: 1.18rem;
+  max-width: 850px;
+  margin-bottom: 8px;
+  color: var(--ink);
+  font-size: clamp(1.15rem, 2.2vw, 1.42rem);
   font-weight: 700;
-  line-height: 1.5;
+  line-height: 1.35;
+}
+
+.profile-specialties {
+  margin-bottom: 7px;
+  color: var(--link);
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.035em;
 }
 
 .profile-availability {
@@ -77,6 +85,19 @@ a:focus-visible { outline: 3px solid rgba(3, 102, 214, 0.22); outline-offset: 3p
 .social-links a { display: inline-flex; transition: transform 160ms ease; }
 .social-links a:hover { transform: translateY(-2px); }
 .social-links img { width: 24px; height: 24px; object-fit: contain; }
+.social-monogram {
+  display: inline-grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--link);
+  color: #fff;
+  font-family: Georgia, serif;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1;
+}
 
 section { padding-top: 1px; margin-bottom: 38px; }
 
@@ -91,6 +112,13 @@ h2 {
 
 h2 span { display: inline-block; width: 32px; font-size: 27px; line-height: 1; text-align: center; }
 section > p { max-width: 1080px; margin-bottom: 16px; }
+.about-lead {
+  max-width: 980px;
+  color: var(--ink);
+  font-size: 1.08rem;
+  font-weight: 700;
+  line-height: 1.65;
+}
 ul { margin: 0; padding-left: 40px; }
 .interest-list li, .community-list li { margin-bottom: 8px; }
 
@@ -112,12 +140,12 @@ ul { margin: 0; padding-left: 40px; }
 .record-list li::before { content: "•"; }
 .work-list { counter-reset: work; }
 .work-list li { counter-increment: work; }
-.work-list li::before { content: "0" counter(work); }
+.work-list li::before { content: counter(work, decimal-leading-zero); }
 .publication-list { counter-reset: publication; }
 .publication-list li { counter-increment: publication; }
-.publication-list li::before { content: "0" counter(publication); }
+.publication-list li::before { content: counter(publication, decimal-leading-zero); }
 
-.record-list strong, .work-list a, .publication-list strong { display: block; margin-bottom: 3px; font-weight: 700; }
+.record-list strong, .work-list a, .work-list strong, .publication-list strong { display: block; margin-bottom: 3px; font-weight: 700; }
 .record-list span, .work-list span, .publication-list span { display: block; color: var(--muted); }
 .record-list p { margin: 6px 0 0; }
 .publication-list p { margin: 5px 0 0; }
